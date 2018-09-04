@@ -1,0 +1,19 @@
+{
+  "name": "product-landing-page-temp",
+  "version": "1.0.0",
+  "description": "Template for product landing pages",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikeheiser9/product-landing-page-temp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mikeheiser9/product-landing-page-temp/issues"
+  },
+  "homepage": "https://github.com/mikeheiser9/product-landing-page-temp#readme"
+}
