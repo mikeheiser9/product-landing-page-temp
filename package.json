@@ -25,7 +25,8 @@
     "mysql2": "^1.6.1",
     "path": "^0.12.7",
     "request": "^2.88.0",
-    "sequelize": "^4.38.0"
+    "sequelize": "^4.38.0",
+    "stripe": "^6.8.0"
   },
   "devDependencies": {
     "concurrently": "^3.6.1",

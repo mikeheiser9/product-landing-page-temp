@@ -16,9 +16,9 @@ app.use(express.static("./app/public/"));
 // These routes give our server a "map" of how to respond when users visit or request data from various URLs.
 // ================================================================================
 
-// require("./app/routes/api-routes")(app);
-require("./app/routes/html-routes")(app);
-// require("./app/public")(app);
+require("./app/routes/api-routes")(app);
+// require("./app/routes/html-routes")(app);
+require("./app/public")(app);
 
 // =============================================================================
 // LISTENER
