@@ -18,7 +18,7 @@ app.use(express.static("./app/public/"));
 
 require("./app/routes/api-routes")(app);
 // require("./app/routes/html-routes")(app);
-require("./app/public")(app);
+// require("./app/public")(app);
 
 // =============================================================================
 // LISTENER
