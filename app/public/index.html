@@ -18,16 +18,15 @@
             <div class="col-s-12 col-md-12 col-lg-12 col-xl-12">
                 <nav class="nav">
                         <ul class="nav nav-pills">
-                                <li class="nav-item">
-                                  <a class="nav-link active" href="#" id="product-page">Product</a>
-                                </li>
-                                <li class="nav-item">
-                                        <a class="nav-link active" href="#" id="checkout">Checkout</a>
-                                </li>
-                              </ul>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#" id="product-page">Product</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#" id="checkout">Checkout</a>
+                            </li>
+                        </ul>
                 </nav>
             </div>
-
         </div>
         <div class="row" id="slider-row">
             <div class="col-s-7 col-md-7 col-lg-7 col-xl-7">
@@ -45,27 +44,45 @@
                     <p class="small-print" style="margin-left: 10px;">Get It Now For:</p>
                     <p class="price" style="color:cornflowerblue">$10.99</p>
                 </div>
-                </div>
+            </div>
         </div>
         <div class="row" id="slider-row">
             <div class="col-s-7 col-md-7 col-lg-7 col-xl-7">
             <div class="sp-loading"><img src="./images/sp-loading.gif" alt=""><br>LOADING IMAGES</div>
-		<div class="sp-wrap">
-			<a href="./images/1.jpg" class="sp-default"><img src="./images/1_tb.jpg" alt=""></a>
-			<a href="./images/2.jpg"><img src="./images/2_tb.jpg" alt=""></a>
-			<a href="./images/3.jpg"><img src="./images/3_tb.jpg" alt=""></a>
-			<a href="./images/4.jpg"><img src="./images/4_tb.jpg" alt=""></a>
-			<a href="./images/5.jpg"><img src="./images/5_tb.jpg" alt=""></a>
-			<a href="./images/6.jpg"><img src="./images/6_tb.jpg" alt=""></a>
-		</div>
+		    <div class="sp-wrap">
+			    <a href="./images/1.jpg" class="sp-default"><img src="./images/1_tb.jpg" alt=""></a>
+			    <a href="./images/2.jpg"><img src="./images/2_tb.jpg" alt=""></a>
+			    <a href="./images/3.jpg"><img src="./images/3_tb.jpg" alt=""></a>
+			    <a href="./images/4.jpg"><img src="./images/4_tb.jpg" alt=""></a>
+			    <a href="./images/5.jpg"><img src="./images/5_tb.jpg" alt=""></a>
+			    <a href="./images/6.jpg"><img src="./images/6_tb.jpg" alt=""></a>
+		    </div>
             </div>
             <div class="col-s-5 col-md-5 col-lg-5 col-xl-5">
+                <div class="row">
+                    <input placeholder="review-placeholder" class="review-input"> 
+                </div>
+                <div class="row info-row">
+                    <img src="./images/ship.png" id="shipping-icon">
+                    <p class="ship-text">THIS ITEM SHIPS WITHIN 7 DAYS!</p>
+                </div>
+                <div class="row info-row">
+                    <p>Something Salesy Something Salesy Something Salesy Something Salesy Something Salesy Something Salesy Something Salesy</p>
+                </div>
+                <div class="row info-row">
+                    <form action="/charge" method="POST">
+                        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="pk_test_IOEQTXL1kBrlCn8l0fSG4Z8T" data-amount="1099" data-name="slinky" data-description="Its a slinky yo." data-locale="auto" data-currency="usd">
+                        </script>
+                        <input type="hidden" name="chargeAmount" value="1099">
+                    </form>
 
+                </div>
+
+            </div>
+                
             </div>
         </div>
         
-        
-
 
 
     </div>
@@ -75,7 +92,6 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
         <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
         <script type="text/javascript" src="./js/smoothproducts.js"></script>
-        <script src="./js/bootstrap-rating-input.min.js" type="text/javascript"></script>
         <script type="text/javascript">
         /* wait for images to load */
         $( document ).ready(function() {

@@ -1,7 +1,10 @@
 var express = require("express");
+var stripe = require("stripe")("sk_test_88HBiIjmecJLtvJxacSldSNE");
 var bodyParser = require("body-parser");
+
 // Tells node that we are creating an "express" server
 var app = express();
+
 var PORT = process.env.PORT || 3000;
 
 var db = require("./app/models")

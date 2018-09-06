@@ -57,3 +57,22 @@ price:hover {
 .price-row {
     margin-left: 50px;
 }
+
+.review-input {
+    margin-left: 65px;
+    margin-top: -30px;
+}
+
+.info-row {
+    margin-left: 50px;
+    margin-top: 20px;
+    margin-right: 15px;
+}
+
+.ship-text {
+    margin-left: 10px;
+    font-weight: 600;
+    color: gray;
+    margin-top: 25px;
+    text-decoration: underline;
+}

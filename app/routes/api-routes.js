@@ -17,4 +17,28 @@ module.exports = function (app) {
                 res.json(dbPost);
             });
     });
+
+    app.get('/paysuccess', function(req, res) {
+        res.render('paysuccess', {
+        })
+    })
+
+    app.post("/charge", (req, res) => {
+        stripe.charges
+          .create({
+            amount: req.body.totalAmount,
+            description: "Sample Charge",
+            currency: "usd",
+            source: req.body.stripeToken
+          })
+          .then(charge => {
+            res.json(charge);
+          })
+          .catch(err => {
+            throw err;
+          });
+      });
+
+
+
     };

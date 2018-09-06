@@ -2,30 +2,30 @@ var express = require("sequelize");
 
 module.exports = function (sequelize, DataTypes) {
     // Creates a "Character" model that matches up with DB
-    var form = sequelize.define("form", {
+    var product = sequelize.define("product", {
         // the name of the character (a string)
-        name: {
+        product_name: {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
                 len: [1]
             }
         },
-        email: {
-            type: DataTypes.STRING,
+        product_price: {
+            type: DataTypes.DECIMAL(13,4),
             allowNull: false,
             validate: {
                 len: [1]
             }
         },
-        phone: {
-            type: DataTypes.STRING,
+        quantity: {
+            type: DataTypes.INTEGER,
             allowNull: false,
             validate: {
                 len: [1]
             }
         },
-        message: {
+        producu_description: {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
@@ -33,5 +33,5 @@ module.exports = function (sequelize, DataTypes) {
             }
         },
     });
-    return form;
+    return product;
 };
