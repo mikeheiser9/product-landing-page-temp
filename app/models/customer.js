@@ -19,19 +19,24 @@ module.exports = function (sequelize, DataTypes) {
             }
         },
         phone: {
-            type: DataTypes.STRING,
+            type: DataTypes.BIGINT,
             allowNull: false,
             validate: {
                 len: [1]
             }
         },
-        message: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            validate: {
-                len: [1]
-            }
-        },
+        createdAt: {
+            type: DataTypes.DATE,
+            field: 'beginTime',
+            defaultValue: sequelize.literal('NOW()')
+          },
+          updatedAt: {
+            type: DataTypes.DATE,
+            field: 'beginTime',
+            defaultValue: sequelize.literal('NOW()')
+          }
+        }, {
+          timestamps: true,
     });
     return contact;
 };

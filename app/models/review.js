@@ -2,49 +2,48 @@ var express = require("sequelize");
 
 module.exports = function (sequelize, DataTypes) {
     // Creates a "Character" model that matches up with DB
-    var product = sequelize.define("product", {
+    var review = sequelize.define("review", {
         // the name of the character (a string)
-        product_name: {
+            name: {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
-                len: [1]
+                len: [2]
             }
         },
-        product_price: {
-            type: DataTypes.DECIMAL(13,4),
-            allowNull: false,
-            validate: {
-                len: [1]
-            }
-        },
-        product_past_price: {
-            type: DataTypes.DECIMAL(13,4),
-            allowNull: false,
-            validate: {
-                len: [1]
-            }
-        },
-        quantity: {
+            star_rating: {
             type: DataTypes.INTEGER,
             allowNull: false,
             validate: {
                 len: [1]
             }
         },
-        product_description: {
+            message: {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
                 len: [1]
             }
         },
-        product_images: {
+            email: {
             type: DataTypes.STRING,
-            allowNull: false
-        }, 
-    }, {
-        timestamps: false,
+            allowNull: false,
+            validate: {
+                len: [1]
+            }
+        },
+        createdAt: {
+            type: DataTypes.DATE,
+            field: 'beginTime',
+            defaultValue: sequelize.literal('NOW()')
+          },
+          updatedAt: {
+            type: DataTypes.DATE,
+            field: 'beginTime',
+            defaultValue: sequelize.literal('NOW()')
+          }
+        }, {
+          timestamps: true, 
     });
-    return product;
+    return review;
 };

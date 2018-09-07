@@ -48,6 +48,7 @@ html, body {
 .sp-thumbs a:link, .sp-thumbs a:visited {
 	width: 100px;
 	height: 100px;
+	margin-left: 10px;
 	overflow: hidden;
 	opacity: .3;
 	display: inline-block;
