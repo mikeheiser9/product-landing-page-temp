@@ -1,7 +1,7 @@
-var db = require("../models");
+
 // Routes
 // =============================================================
-module.exports = function (app) {
+module.exports = function (app, stripe) {
 
     // POST route for saving a new Class
     app.post("/api/new", function (req, res) {
@@ -23,22 +23,37 @@ module.exports = function (app) {
         })
     })
 
+    // app.post("/charge", (req, res) => {
+    //     stripe.charges
+    //       .create({
+    //         amount: req.body.totalAmount,
+    //         description: "Sample Charge",
+    //         currency: "usd",
+    //         source: req.body.stripeToken
+    //       })
+    //       .then(charge => {
+    //         res.json(charge);
+    //       })
+    //       .catch(err => {
+    //         throw err;
+    //       });
+    //   });
+
     app.post("/charge", (req, res) => {
-        stripe.charges
-          .create({
-            amount: req.body.totalAmount,
+        let amount = 1099;
+      
+        stripe.customers.create({
+           email: req.body.stripeEmail,
+          source: req.body.stripeToken
+        })
+        .then(customer =>
+          stripe.charges.create({
+            amount,
             description: "Sample Charge",
-            currency: "usd",
-            source: req.body.stripeToken
-          })
-          .then(charge => {
-            res.json(charge);
-          })
-          .catch(err => {
-            throw err;
-          });
+               currency: "usd",
+               customer: customer.id
+          }))
+        .then(charge => res.render("success.html"));
       });
-
-
 
     };

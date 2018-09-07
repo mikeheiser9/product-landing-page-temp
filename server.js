@@ -1,13 +1,16 @@
-var express = require("express");
-var stripe = require("stripe")("sk_test_88HBiIjmecJLtvJxacSldSNE");
-var bodyParser = require("body-parser");
+const publicKey = process.env.PUBLISHABLE_KEY
+const secretKey = process.env.SECRET_KEY
+
+const express = require("express");
+const stripe = require("stripe")(secretKey);
+const bodyParser = require("body-parser");
 
 // Tells node that we are creating an "express" server
-var app = express();
+const app = express();
 
-var PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
-var db = require("./app/models")
+const db = require("./app/models");
 // Sets up the Express app to handle data parsing
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
