@@ -1,3 +1,8 @@
+* {
+    font-family: 'Lato', sans-serif !important;
+}
+
+
 .nav {
     height: 70px;
     background-color: whitesmoke;
@@ -44,6 +49,7 @@ price:hover {
 .short-des {
     margin-left: 15px;
     margin-right: 15px;
+    width: 83%;
 }
 
 .small-print {
@@ -54,17 +60,12 @@ price:hover {
     margin-right: 10px;
 }
 
-.price-row {
-    margin-left: 50px;
-}
 
 .review-input {
-    margin-left: 65px;
     margin-top: -30px;
 }
 
 .info-row {
-    margin-left: 50px;
     margin-top: 20px;
     margin-right: 15px;
 }
@@ -75,4 +76,23 @@ price:hover {
     color: gray;
     margin-top: 25px;
     text-decoration: underline;
+}
+
+.stripe-button-el span {
+    width: 250px !important;
+}
+
+
+#quantity-input {
+    height: 35px;
+    width: 10%;
+    text-align: center;
+}
+
+.quantity-text {
+    font-size: 12px;
+    color: gray;
+    font-weight: 600;
+    margin-right: 10px;
+    margin-top: 18px;
 }

@@ -9,7 +9,7 @@ html, body {
 
 .sp-loading {
 	text-align: center;
-	min-width: 100%;
+	min-width: 85%;
 	padding: 15px;
 	border: 5px solid #eee;
 	border-radius: 3px;
@@ -31,8 +31,7 @@ html, body {
 	/**************
 	  Set max-width to your thumbnail width
 	***************/
-	
-	min-width: 100%;
+	min-width: 85%;
 }
 
 /* Thumbnails */
