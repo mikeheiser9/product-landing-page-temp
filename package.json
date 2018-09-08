@@ -20,6 +20,7 @@
   "homepage": "https://github.com/mikeheiser9/product-landing-page-temp#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "dotenv": "^6.0.0",
     "express": "^4.16.3",
     "mysql": "^2.16.0",
     "mysql2": "^1.6.1",

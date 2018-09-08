@@ -1,5 +1,17 @@
-const publicKey = process.env.PUBLISHABLE_KEY
-const secretKey = process.env.SECRET_KEY
+const dotenv = require("dotenv")
+
+const envfile =
+ process.env.NODE_ENV === "production"
+   ? ".env" // production
+   : ".dev.env"; // development
+dotenv.config({
+ silent: true,
+ path: `${__dirname}/${envfile}`
+});
+
+const publicKey= process.env.PUBLIC_KEY
+const secretKey= process.env.SECRET_KEY
+
 
 const express = require("express");
 const stripe = require("stripe")(secretKey);
@@ -24,11 +36,9 @@ app.use(express.static("./app/public/"));
 
 require("./app/routes/api-routes")(app);
 // require("./app/routes/html-routes")(app);
-// require("./app/public")(app);
 
 // =============================================================================
 // LISTENER
-// The below code effectively "starts" our server
 // =============================================================================
 
 db.sequelize.sync({}).then(function () {
