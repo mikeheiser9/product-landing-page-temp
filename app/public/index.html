@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Landing Page Template</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <script src="../js/main.js"></script>     -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/smoothproducts.css">
     <link rel="stylesheet" href="./css/store.css">
@@ -56,7 +57,15 @@
             </div>
             <div class="col-s-5 col-md-5 col-lg-5 col-xl-5">
                 <div class="row">
-                    <input placeholder="review-placeholder" class="review-input"> 
+                    <div id="review-holder">
+                        <i class="material-icons" data-rating-value="1">grade</i>
+                        <i class="material-icons" data-rating-value="2">grade</i>
+                        <i class="material-icons" data-rating-value="3">grade</i>
+                        <i class="material-icons" data-rating-value="4">grade</i>
+                        <i class="material-icons" data-rating-value="5">grade</i>
+                    </div> 
+                    <p class="review-print">4.7</p>
+                    <p class="review-print" id="review-amt">(576)</p>
                 </div>
                 <div class="row info-row">
                     <img src="./images/ship.png" id="shipping-icon">
@@ -69,12 +78,12 @@
                    <p class="quantity-text">Quantity:</p> 
                    <input type="number" value="1" id="quantity-input">
                 </div>
-                <div class="row info-row">
-                    <div class="example5-paymentRequest">
-
-                    </div>
-                </div>
+                
     <div class="row info-row">
+        <p id="pay-with">Pay with: ApplePay, GooglePay or AndriodPay</p>
+        <div id="example5-paymentRequest">
+            <!-- pay-request button -->
+        </div>     
         <form method="post" action="/charge" id="payment-form">
       <div class="form-row">
         <label for="card-element">
@@ -130,6 +139,7 @@
         <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
         <script type="text/javascript" src="./js/smoothproducts.js"></script>
         <script src="./js/payments.js"></script>
+        <script src="./js/app.js"></script>
 
         <script type="text/javascript">
         /* wait for images to load */
@@ -139,6 +149,8 @@
         $(window).load( function() {
         $('.sp-wrap').smoothproducts();
         });
+
+
 
 
         });

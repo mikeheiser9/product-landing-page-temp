@@ -133,3 +133,57 @@ price:hover {
 .nav-icon img:hover {
     background-color: cornflowerblue !important;
 }
+
+#review-holder:hover {
+    color: white !important;
+    -webkit-text-stroke: 3px black;
+}
+
+.material-icons {
+    font-family: 'Material Icons' !important;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 32px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    color: white;
+    -webkit-text-stroke: 3px black;
+
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
+
+  .review-print{    
+    margin-top: 11px;
+    font-size: 17px;
+    margin-left: 10px;
+    color: gray;
+    font-weight: 600;
+    margin-right: 10px;
+  }
+
+  .hoverSelected {
+      color: cornflowerblue !important;
+  }
+
+  .clickSelected {
+      color: cornflowerblue;
+  }
+
+  #review-holder:hover {
+    cursor: pointer;
+  }

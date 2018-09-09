@@ -39,6 +39,8 @@ html, body {
 .sp-thumbs {
 	text-align: center;
 	display: inline-block;
+	background-color: lightgray;
+
 }
 .sp-thumbs img {
 	min-height: 100px;

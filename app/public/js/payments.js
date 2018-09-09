@@ -76,7 +76,7 @@ function stripeTokenHandler(token) {
     country: "US",
     currency: "usd",
     total: {
-      amount: 2500,
+      amount: 1099,
       label: "Total"
     },
     requestShipping: true,
