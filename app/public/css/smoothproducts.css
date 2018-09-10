@@ -32,6 +32,7 @@ html, body {
 	  Set max-width to your thumbnail width
 	***************/
 	min-width: 85%;
+	background-color: lightgray;
 }
 
 /* Thumbnails */
@@ -39,7 +40,6 @@ html, body {
 .sp-thumbs {
 	text-align: center;
 	display: inline-block;
-	background-color: lightgray;
 
 }
 .sp-thumbs img {

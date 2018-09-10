@@ -120,7 +120,8 @@ price:hover {
 
 .nav-icon {
     float: right;
-    margin-right: 10px;
+    position: absolute;
+    right: 15px;
 }
 .nav-icon img {
     width: 60%;
@@ -128,6 +129,7 @@ price:hover {
     padding: 3px;
     margin-top: 13px;
     border-radius: 7px;
+    position: relative;
 }
 
 .nav-icon img:hover {
@@ -186,4 +188,14 @@ price:hover {
 
   #review-holder:hover {
     cursor: pointer;
+  }
+
+  #cart-value {
+    right: 34px !important;
+    position: absolute;
+    margin-top: 6px;
+  }
+
+  #card-element {
+      width: 400px !important;
   }

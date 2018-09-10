@@ -5,7 +5,7 @@ var request = require("request");
 module.exports = function (app, stripe) {
 
       app.get("/products/:id", function (req, res) {
-        // console.log("topSpots route triggered")
+        console.log(res);
         db.products.findOne({ 
             where: {
                 id: req.params.id 
@@ -13,8 +13,8 @@ module.exports = function (app, stripe) {
             })
             .then(function (data) {
                 // console.log(data);
-                var imageArr = data.images.split(",");
-                console.log(imageArr);
+                // var imageArr = data.images.split(",");
+                console.log(data);
                 res.json(data);
                 });
             });

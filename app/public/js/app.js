@@ -2,8 +2,9 @@
 //sk_test_88HBiIjmecJLtvJxacSldSNE
 
 $(document).ready(function() {
-    var reviewAmount = $("#review-amt").val();
-    console.log("review amount is: "+ reviewAmount);
+    
+    var reviewAmount = $("#review-amt").text();
+    console.log("review amount is: " + reviewAmount);
 
     $('.material-icons').hover(function() {
         $(this).prevAll().andSelf().addClass('hoverSelected');
@@ -15,6 +16,15 @@ $(document).ready(function() {
 ).click(function() {
     $('.material-icons').removeClass("hoverSelected");
     $(this).prevAll().andSelf().addClass('clickSelected').removeClass('hoverSelected');
+    //reviewAmount +1;
 })
+
+
+//cart
+var orderQnt = $("#quantity-input").val();
+console.log(orderQnt);
+var cartVal = $("#cart-value").text();
+console.log(cartVal);
+
 
 });
