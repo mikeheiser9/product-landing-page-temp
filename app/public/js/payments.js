@@ -1,3 +1,6 @@
+$( document ).ready(function() {
+  console.log( "stripe ready!" );
+
 const stripe = Stripe("pk_live_fA9g8eTjdCXwBdl9cRzc4tP6");
 const elements = stripe.elements();
 const style = {
@@ -121,3 +124,5 @@ function stripeTokenHandler(token) {
       paymentRequestElement.mount("#example5-paymentRequest");
     }
   });
+
+})

@@ -4,9 +4,9 @@ var request = require("request");
 // =============================================================
 module.exports = function (app, stripe) {
 
-      app.get("/products/:id", function (req, res) {
+      app.get("/api/products/:id", function (req, res) {
         console.log(res);
-        db.products.findOne({ 
+        db.product.findOne({ 
             where: {
                 id: req.params.id 
             }  
